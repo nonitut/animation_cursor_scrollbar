@@ -1,0 +1,127 @@
+*{ box-sizing: border-box;}
+body{ 
+    display: flex;
+    width: 100%;
+ }
+
+@font-face {
+font-family: "CarlaSansLight";
+src: url("../fonts/CarlaSansLight.ttf") format("truetype");
+font-style: Light;
+font-weight: Light;
+}
+
+p{ font-family: 'CarlaSansLight'; }
+
+
+.section_first{ 
+    height: 20vw;
+    width: 35%;
+    overflow-x: hidden;
+    background: lavender;
+    position: relative;
+    cursor: url("../sh.png"), auto;
+}
+
+.circle{
+    width: 6vw;
+    height: 6vw;
+    background: blue;
+    color: aliceblue;
+    border-radius: 50%;
+    font-size: 5vw;
+    text-align: center;
+    border: 6px dashed aliceblue;
+    position: absolute;
+    animation: ball 5s linear infinite;
+}
+
+@keyframes ball{
+    0%{ top: 0%; left: 0%;}
+    10%{ top: 10%; left: 20%; rotate: 45deg;}
+    30%{ top: 0%; left: 40%;}
+    50%{ top: 10%; left: 60%; scale: 0.5;  rotate: -45deg;}
+    70%{ top: 0%; left: 80%;}
+    100%{ top: 10%; left: 110%;}
+}
+
+.section_second{
+    height: 20vw;
+    width: 35%;
+    overflow-x: hidden;
+    background: lemonchiffon;
+    position: relative;
+}
+
+.rotate{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    transform-origin: left center;
+    position: absolute;
+    animation: spin 3s linear infinite;
+    border: 1px solid lightcoral;
+    transform-style: preserve-3d;
+    margin-left: 30%;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 50px;
+}
+.fixed{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    transform-origin: left center;
+    position: absolute;
+    border: 1px solid lightcoral;
+    transform-style: preserve-3d;
+    margin-left: 30%;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 50px;
+}
+
+.rotating{ 
+    animation-delay: 0.5s;
+}
+
+@keyframes spin {
+     0%{ transform: rotateX(0deg);}
+     100%{ transform: rotateX(360deg);}
+}
+
+.scrollbar_cursor{
+    height: 20vw;
+    width: 30%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background: lightcoral;
+    position: relative;
+    display: flex;
+    padding: 0.5%;
+    scrollbar-color: white  blue ;
+}
+
+.box{ 
+    border: 1px dashed lightslategray;
+    text-align: center;
+    transition: all 0.3s;
+    width: 12vw;
+    height: 30vw;
+    margin: 1%;
+    background: lemonchiffon;
+}
+
+.box:hover{
+    background: lawngreen;
+    transition: all 0.3s;
+}
+
+.default{ cursor: default;}
+.pointer{ cursor: pointer;}
+.move{ cursor: move; }
+.text{ cursor: text;}
+.wait{ cursor: wait;}
+.help{ cursor: help;}
+.grab{ cursor: grab;}
+.no_cursor{ cursor: none;}
